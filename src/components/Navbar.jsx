@@ -90,7 +90,7 @@ const NavBar = () => {
               hover:bg-white/20
               transition"
           >
-            Login
+            AboutUs
           </button>
 
           <button
