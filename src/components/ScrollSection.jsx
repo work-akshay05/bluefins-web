@@ -58,7 +58,7 @@ const MobileInteractionComponent = () => {
   return (
     <div
       ref={sectionRef}
-      className="min-h-[220vh] bg-gradient-to-br from-indigo-900 via-indigo-800 to-indigo-900 flex items-start justify-center p-8"
+      className="min-h-[220vh] bg-indigo-800 flex items-start justify-center p-8"
     >
       <div className="relative w-full max-w-6xl h-[100vh] sticky top-8">
         <div className="absolute left-8 top-1/3 -translate-y-1/2">

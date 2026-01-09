@@ -41,7 +41,7 @@ const PeopleInteractionSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen bg-gradient-to-br from-indigo-900 via-indigo-800 to-indigo-900 flex items-center justify-center"
+      className="min-h-screen bg-indigo-800 flex items-center justify-center"
     >
       <div className="flex gap-24">
         <div ref={(el) => (peopleRef.current[0] = el)}>

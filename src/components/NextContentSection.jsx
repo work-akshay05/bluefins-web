@@ -55,7 +55,7 @@ const NextContentSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="min-h-[150vh] bg-gradient-to-br from-indigo-900 via-indigo-800 to-indigo-900 "
+      className="min-h-[150vh] bg-indigo-800 "
     >
     <div ref={leftBoxRef} className="relative w-full max-w-6xl h-[80vh] sticky top-8">
         <div className="absolute top-[30%] left-[10%] bg-white rounded-2xl p-5 w-96 shadow-2xl">
