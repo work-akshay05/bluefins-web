@@ -2,9 +2,10 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import person1 from "../assets/person1.svg";
+import PersonOne from "./PersonOne";
 import person2 from "../assets/person2.svg";
 import person3 from "../assets/person3.svg";
+import PersonTwo from "./PersonTwo";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,13 +46,13 @@ const PeopleInteractionSection = () => {
     >
       <div className="flex gap-24">
         <div ref={(el) => (peopleRef.current[0] = el)}>
-          <img src={person1} alt="Person using phone" className="h-[320px]" />
+          <PersonOne className="h-[320px] w-auto" />
         </div>
         <div ref={(el) => (peopleRef.current[1] = el)}>
-          <img src={person2} alt="Person using phone" className="h-[320px]" />
+          <PersonTwo className="h-[320px] w-auto" />
         </div>
         <div ref={(el) => (peopleRef.current[2] = el)}>
-          <img src={person3} alt="Person using phone" className="h-[320px]" />
+          <PersonOne className="h-[320px] w-auto" />
         </div>
       </div>
     </section>
