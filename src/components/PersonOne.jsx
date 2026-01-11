@@ -7,29 +7,28 @@ gsap.registerPlugin(ScrollTrigger);
 
 const PersonOne = ({ className }) => {
   const containerRef = useRef(null);
-  const [play, setPlay] = useState(false);
+  const [shouldRender, setShouldRender] = useState(false);
+  const hasTriggered = useRef(false);
 
   useEffect(() => {
     const trigger = ScrollTrigger.create({
       trigger: containerRef.current,
       start: "top 70%",
-      end: "bottom 30%",
-
-      onEnter: () => setPlay(true),
-      onEnterBack: () => setPlay(true),
-
-      onLeave: () => setPlay(false),
-      onLeaveBack: () => setPlay(false),
+      once: true, // 🔥 sirf ek baar trigger
+      onEnter: () => {
+        if (!hasTriggered.current) {
+          hasTriggered.current = true;
+          setShouldRender(true); // 👈 Lottie ek hi baar mount hogi
+        }
+      },
     });
 
-    return () => {
-      trigger.kill();
-    };
+    return () => trigger.kill();
   }, []);
 
   return (
     <div ref={containerRef}>
-      {play && (
+      {shouldRender && (
         <DotLottieReact
           src="https://lottie.host/5f7f3900-f2ed-47d4-8cf7-fb1e57baa591/8qlzCjbVU8.lottie"
           autoplay
@@ -42,6 +41,8 @@ const PersonOne = ({ className }) => {
 };
 
 export default PersonOne;
+
+
 
 
 

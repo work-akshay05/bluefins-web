@@ -58,43 +58,47 @@ const MobileInteractionComponent = () => {
   return (
     <div
       ref={sectionRef}
-      className="min-h-[220vh] bg-indigo-800 flex items-start justify-center p-8"
+      className="min-h-[220vh] bg-indigo-800 flex items-start justify-center p-4 sm:p-6 md:p-8"
     >
-      <div className="relative w-full max-w-6xl h-[100vh] sticky top-8">
-        <div className="absolute left-8 top-1/3 -translate-y-1/2">
+      <div className="relative w-full max-w-6xl h-[100vh] sticky top-4 sm:top-6 md:top-8">
+        {/* Phone Section */}
+        <div className="absolute left-2 sm:left-4 md:left-8 top-1/4 sm:top-1/3 -translate-y-1/2">
           <div className="relative">
             <img 
               src={phoneImg} 
               alt="Phone" 
-              className="h-[50vh] w-auto"
+              className="h-[30vh] sm:h-[40vh] md:h-[50vh] w-auto"
             />
             <button
               ref={buttonRef}
-              className="absolute bottom-16 left-[45%] -translate-x-1/2 -translate-y-1/2 bg-purple-600 text-white px-2 py-1 rounded-3xl font-semibold hover:bg-purple-700 transition-colors shadow-lg"
+              className="absolute bottom-8 sm:bottom-12 md:bottom-16 left-[45%] -translate-x-1/2 -translate-y-1/2 bg-purple-600 text-white px-2 py-1 text-xs sm:text-sm md:text-base rounded-3xl font-semibold hover:bg-purple-700 transition-colors shadow-lg"
             >
               Create Event
             </button>
           </div>
         </div>
-        <div className="absolute left-[22%] top-1/3 -translate-y-1/2" ref={personRef}>
+        
+        {/* Person Image */}
+        <div className="absolute left-[15%] sm:left-[18%] md:left-[22%] top-1/4 sm:top-1/3 -translate-y-1/2" ref={personRef}>
           <img 
-            src= {personImg}
+            src={personImg}
             alt="Person" 
-            className="h-[50vh] w-auto"
+            className="h-[30vh] sm:h-[40vh] md:h-[50vh] w-auto"
           />
         </div>
 
-        <div ref={contentBoxRef} className="absolute top-[20%] left-[28rem] bg-white rounded-3xl p-5 w-72 shadow-2xl">
+        {/* Content Box - Hidden on mobile, visible on larger screens */}
+        <div ref={contentBoxRef} className="hidden sm:block absolute top-[15%] sm:top-[18%] md:top-[20%] left-[50%] sm:left-[20rem] md:left-[28rem] bg-white rounded-3xl p-3 sm:p-4 md:p-5 w-48 sm:w-60 md:w-72 shadow-2xl">
           
         </div>
 
-        <div className="absolute bottom-12 right-8 bg-white rounded-2xl p-8 w-96 shadow-2xl">
-          <h2 className="text-2xl font-bold text-gray-800 mb-3">
+        {/* Info Card */}
+        <div className="absolute bottom-4 sm:bottom-8 md:bottom-12 right-2 sm:right-4 md:right-8 bg-white rounded-xl sm:rounded-2xl p-3 sm:p-6 md:p-8 w-[55%] sm:w-72 md:w-96 shadow-2xl">
+          <h2 className="text-sm sm:text-xl md:text-2xl font-bold text-gray-800 mb-1 sm:mb-3">
             Another Section
           </h2>
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-xs sm:text-base text-gray-600 leading-relaxed line-clamp-3 sm:line-clamp-none">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, optio.
-
           </p>
         </div>
         

@@ -55,29 +55,29 @@ const NextContentSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="min-h-[150vh] bg-indigo-800 "
+      className="min-h-[150vh] bg-indigo-800 px-4 sm:px-6 md:px-8"
     >
-    <div ref={leftBoxRef} className="relative w-full max-w-6xl h-[80vh] sticky top-8">
-        <div className="absolute top-[30%] left-[10%] bg-white rounded-2xl p-5 w-96 shadow-2xl">
-          <h2 className="text-2xl font-bold text-gray-800 mb-3">
+      <div ref={leftBoxRef} className="relative w-full max-w-6xl mx-auto h-[80vh] sticky top-4 sm:top-6 md:top-8">
+        {/* Left Card */}
+        <div className="absolute top-[20%] sm:top-[25%] md:top-[30%] left-0 sm:left-[5%] md:left-[10%] bg-white rounded-xl sm:rounded-2xl p-3 sm:p-5 w-[60%] sm:w-72 md:w-96 shadow-2xl">
+          <h2 className="text-sm sm:text-xl md:text-2xl font-bold text-gray-800 mb-1 sm:mb-3">
             Another Section
           </h2>
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-xs sm:text-base text-gray-600 leading-relaxed line-clamp-3 sm:line-clamp-none">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, optio.
-
           </p>
         </div>
-        <div ref={rightBoxRef} className="absolute top-[60%] right-8 bg-white rounded-2xl p-5 w-96 shadow-2xl">
-          <h2 className="text-2xl font-bold text-gray-800 mb-3">
+        
+        {/* Right Card */}
+        <div ref={rightBoxRef} className="absolute top-[50%] sm:top-[55%] md:top-[60%] right-0 sm:right-4 md:right-8 bg-white rounded-xl sm:rounded-2xl p-3 sm:p-5 w-[60%] sm:w-72 md:w-96 shadow-2xl">
+          <h2 className="text-sm sm:text-xl md:text-2xl font-bold text-gray-800 mb-1 sm:mb-3">
             Another Section
           </h2>
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-xs sm:text-base text-gray-600 leading-relaxed line-clamp-3 sm:line-clamp-none">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, optio.
-
           </p>
         </div>
-    </div>
-    
+      </div>
     </section>
   );
 };
