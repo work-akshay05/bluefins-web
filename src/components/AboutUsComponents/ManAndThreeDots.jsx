@@ -65,7 +65,7 @@ const ManAndThreeDots = () => {
       <div className="thinking absolute top-[15vh] left-[52vh] opacity-0">
         <img src={RoundedRectangle} className="h-16" />
       </div>
-
+      
       <div className="green absolute top-60 left-[70vh] opacity-0">
         <img src={GreenRect} />
       </div>
